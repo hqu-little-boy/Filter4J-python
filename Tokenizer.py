@@ -1,3 +1,4 @@
+import numpy as np
 class Tokenizer:
     def __init__(self):
         self.vocab = None
@@ -13,5 +14,7 @@ class Tokenizer:
             return None
 
     def tokenize(self, text):
+        if self.vocab is None:
+            raise ValueError("Tokenizer not initialized with a vocabulary.")
         values = [1 if word in text else 0 for word in self.vocab]
         return values
