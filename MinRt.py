@@ -8,7 +8,7 @@ class MinRt:
         raise NotImplementedError("This is a static class")
 
     @staticmethod
-    def do_ai(input_array: np.ndarray, script: list[str]) -> int:
+    def do_ai(input_array: np.ndarray) -> int:
         current = np.array(input_array)
         # current = input_array.copy()
         # Dense layer
